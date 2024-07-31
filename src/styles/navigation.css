@@ -1,0 +1,33 @@
+.header-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.nav-bar {
+    position: relative;
+    bottom: 200px; /* Adjust based on your needs */
+    z-index: 2;
+}
+
+.v-toolbar {
+    background-color: #ff66b2;
+}
+
+.v-toolbar-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.nav-btn {
+    color: #ff66b2;
+}
+
+#nav-btn {
+    color: rgb(255, 255, 255);
+}
+
+#nav-icon {
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,15 @@
+/* .popular-post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+} */
+  
+.popular-post-image {
+    width: auto;
+    height: auto;
+}
+/*   
+.post-content {
+    display: flex;
+    flex-direction: column;
+} */

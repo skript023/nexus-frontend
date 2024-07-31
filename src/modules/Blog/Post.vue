@@ -1,0 +1,47 @@
+<template>
+    <v-col cols="12" md="8">
+        <v-row>
+            <!-- Post Card -->
+            <v-col cols="12" md="6" v-for="(post, index) in posts" :key="index" class="mb-4">
+                <v-card class="post-card" @mouseover="hover = true" @mouseleave="hover = false">
+                    <v-img :src="post.image"></v-img>
+                    <v-card-title class="post-title">{{ post.title }}</v-card-title>
+                    <div v-if="hover" class="hover-content">
+                    <p class="article">{{ post.article }}</p>
+                    <div class="actions">
+                        <v-btn small>{{ 10 }} Comments</v-btn>
+                        <v-btn small>Read More</v-btn>
+                    </div>
+                    </div>
+                </v-card>
+            </v-col>
+        </v-row>
+        <!-- Pagination -->
+        <div class="text-center my-4">
+            <v-btn class="mx-2" outlined color="#ff66b2">Prev</v-btn>
+            <v-btn class="mx-2" outlined color="#ff66b2">Next</v-btn>
+        </div>
+    </v-col>
+</template>
+<script lang="ts">
+import '@/styles/blog.css';
+import { ref } from 'vue';
+
+export default {
+    setup() {
+        const hover = ref(false);
+        return { hover };
+    },
+    data() {
+        return {
+            posts: [
+                { title: 'Indirect Speech', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400'},
+                { title: 'Percakapan Langsung (Quoted)', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
+                { title: 'Business Report', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
+                { title: 'Accepting and Confirming in Negotiation', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
+                { title: 'Tugas Komunikasi Bisnis Complain Letter', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
+            ],
+        };
+    }
+}
+</script>

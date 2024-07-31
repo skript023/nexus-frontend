@@ -1,0 +1,54 @@
+.post-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+  
+.post-image {
+    height: 200px;
+}
+  
+.post-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    z-index: 1;
+}
+  
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+  
+.post-card:hover .hover-content {
+    opacity: 1;
+}
+  
+.excerpt {
+    color: #000;
+}
+  
+.article {
+    margin: 16px 0;
+    color: #333;
+}
+  
+.actions {
+    display: flex;
+    gap: 8px;
+}

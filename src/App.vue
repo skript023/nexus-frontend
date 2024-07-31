@@ -1,7 +1,17 @@
 <script setup lang="ts">
-import Blog from './components/Blog.vue';
+import Main from '@/modules/Main.vue';
+
 </script>
+<style scoped>
+.main-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+</style>
 
 <template>
-	<Blog></Blog>
+	<div class="main-page">
+		<Main/>
+	</div>
 </template>
