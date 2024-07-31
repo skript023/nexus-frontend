@@ -1,15 +1,16 @@
 @import "vuetify/styles";
+@import "@marcoschulte/vue3-progress/dist/";
 
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-// #content {
-//     background-image: var(--v-background-image);
-//     background-size: cover;
-//     background-position: center;
-//     background-attachment: fixed;
-// }
+#content {
+    background-image: var(--v-background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
 .main-content {
     position: relative;
