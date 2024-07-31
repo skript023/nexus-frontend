@@ -49,13 +49,11 @@
                             <v-card-text>
                                 <v-list>
                                     <v-list-item v-for="(popularPost, index) in popularPosts" :key="index" class="popular-post-item">
-                                        <v-list-item-avatar>
+                                        <v-list-item-media>
                                             <v-img :src="'https://via.placeholder.com/600x400'" style="height: 50%; width: 50%;"></v-img>
-                                        </v-list-item-avatar>
-                                        <v-list-item-content>
+                                        </v-list-item-media>
                                         <v-list-item-title>{{ popularPost.title }}</v-list-item-title>
                                         <v-list-item-subtitle>{{ popularPost.excerpt }}</v-list-item-subtitle>
-                                        </v-list-item-content>
                                     </v-list-item>
                                 </v-list>
                             </v-card-text>
@@ -73,13 +71,11 @@
                             <v-card-text>
                                 <v-list>
                                     <v-list-item v-for="(popularPost, index) in popularPosts" :key="index" class="popular-post-item">
-                                        <v-list-item-avatar>
+                                        <v-list-item-media>
                                             <v-img :src="'https://via.placeholder.com/600x400'" style="height: 50%; width: 50%;"></v-img>
-                                        </v-list-item-avatar>
-                                        <v-list-item-content>
+                                        </v-list-item-media>
                                         <v-list-item-title>{{ popularPost.title }}</v-list-item-title>
                                         <v-list-item-subtitle>{{ popularPost.excerpt }}</v-list-item-subtitle>
-                                        </v-list-item-content>
                                     </v-list-item>
                                 </v-list>
                             </v-card-text>
@@ -89,26 +85,26 @@
             </v-container>
         </v-main>
         <!-- Footer -->
-        <v-footer>
+        <v-footer color="#ff66B2">
             <v-container>
                 <v-row>
-                <v-col class="text-center" cols="12">
-                    <span>&copy; 2024 Your Company Name</span>
-                </v-col>
-                <v-col class="text-center" cols="12">
-                    <v-btn>Privacy Policy</v-btn>
-                    <v-btn>Terms of Service</v-btn>
-                </v-col>
-                </v-row>
+                    <v-col class="text-center" cols="12">
+                        Copyright <span>&copy; 2024 Seulbi Cybernetic - Designed by Vladimir Leonov</span>
+                    </v-col>
+                    </v-row>
             </v-container>
         </v-footer>
     </v-app>
 </template>
   
 <script lang="ts">
-  import { defineComponent } from 'vue';
-  
-export default defineComponent({
+import { VTreeview } from 'vuetify/labs/VTreeview';
+
+
+export default {
+    components: {
+        VTreeview
+    },
     data() {
         return {
             header: '/cybernetic_b.jpg',
@@ -193,7 +189,7 @@ export default defineComponent({
             ],
         };
     },
-});
+};
 </script>
   
 <style scoped>
