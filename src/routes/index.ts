@@ -1,4 +1,4 @@
-import Post from "@/modules/Blog/Post.vue";
+import Post from "@/modules/Post/Post.vue";
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [

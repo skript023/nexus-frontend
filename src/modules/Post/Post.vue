@@ -25,22 +25,27 @@
 </template>
 <script lang="ts">
 import '@/styles/blog.css';
+
 import { ref } from 'vue';
+import Post from './dto/post.dto';
+import post from './post.service';
 
 export default {
     setup() {
         const hover = ref(false);
         return { hover };
     },
+    mounted() {
+        post.get().then((response) => {
+            if (response.success)
+            {
+                this.posts = response.data as Post[];
+            }
+        })
+    },
     data() {
         return {
-            posts: [
-                { title: 'Indirect Speech', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400'},
-                { title: 'Percakapan Langsung (Quoted)', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
-                { title: 'Business Report', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
-                { title: 'Accepting and Confirming in Negotiation', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
-                { title: 'Tugas Komunikasi Bisnis Complain Letter', article: 'Full article text goes here...', excerpt: 'Some text here...', image: 'https://via.placeholder.com/600x400' },
-            ],
+            posts: [] as Post[],
         };
     }
 }
