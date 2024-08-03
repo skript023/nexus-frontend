@@ -48,7 +48,9 @@ export default {
 				<v-container class="pa-0">
 					<top-nav/>
 					<v-row>
-						<router-view/>
+						<v-col cols="12" md="8">
+							<router-view/>
+    					</v-col>
 						<side-panel/>
 					</v-row>
 				</v-container>
