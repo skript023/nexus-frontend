@@ -1,7 +1,7 @@
 export default interface ServerResponse<T>
 {
     message: string;
-    data: T | T[];
+    data: T;
     success: boolean;
     last_page: number;
     total_data: number;

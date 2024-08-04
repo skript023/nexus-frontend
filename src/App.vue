@@ -26,13 +26,13 @@ export default {
 		router.afterEach((_to: any, _from: any) => {
 			progresses.pop()?.finish();
 		});
-
+		
 		return {
 			progresses,
 		}
 	},
 	mounted() {
-		
+		console.log(import.meta.env.VITE_API_URL_DEV);
 	},
 	created() {
 

@@ -6,11 +6,11 @@ export default interface Post
     title: string;
     article: string;
     slug: string;
-    image: string;
+    image: string | null;
     status: string;
     createdAt: string;
     updatedAt: string;
     category: any;
-    comments: any;
+    comments: any[];
     user: any;
 }

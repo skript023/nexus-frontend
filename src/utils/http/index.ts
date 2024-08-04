@@ -17,7 +17,7 @@ axios.interceptors.response.use(resp => {
 });
 
 export const url = {
-    backend: import.meta.env.VITE_ENVIRONMENT === 'development' ? import.meta.env.VITE_BACKEND_URL_DEV : import.meta.env.VITE_BACKEND_URL_PROD 
+    backend: import.meta.env.VITE_ENVIRONMENT === 'development' ? import.meta.env.VITE_API_URL_DEV : import.meta.env.VITE_API_URL_PROD 
 }
 
 const request = axios.create({

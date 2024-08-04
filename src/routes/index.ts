@@ -1,11 +1,11 @@
-import Post from "@/modules/Post/Post.vue";
+
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Home',
-        component: Post,
+        component: () => import('@/modules/Post/Post.vue'),
     },
 ];
   

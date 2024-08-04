@@ -34,6 +34,20 @@ export default class post
         }
     }
 
+    static async read_more(slug: string): Promise<ServerResponse<Post>>
+    {
+        try 
+        {
+            const response = await http.get(`/api/Post/read-more/${slug}`);
+
+            return response.data;
+        } 
+        catch (error: any) 
+        {
+            return error.response.data;
+        }
+    }
+
     static async update(id: string, post: Post): Promise<ServerResponse<Post>>
     {
         try

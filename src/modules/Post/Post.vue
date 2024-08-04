@@ -3,13 +3,13 @@
         <!-- Post Card -->
         <v-col cols="12" md="6" v-for="(post, index) in posts" :key="index" class="mb-4">
             <v-card class="post-card" @mouseover="hover = true" @mouseleave="hover = false">
-                <v-img :src="post.image"></v-img>
+                <v-img :src="post.image ? post.image : 'https://via.placeholder.com/600x400'"></v-img>
                 <v-card-title class="post-title">{{ post.title }}</v-card-title>
                 <div v-if="hover" class="hover-content">
                 <p class="article">{{ post.article }}</p>
                 <div class="actions">
-                    <v-btn small>{{ 10 }} Comments</v-btn>
-                    <v-btn small>Read More</v-btn>
+                    <v-btn small>{{ post.comments.length }} Comments</v-btn>
+                    <v-btn small @click="readMore(post)">Read More</v-btn>
                 </div>
                 </div>
             </v-card>
@@ -33,6 +33,11 @@ export default {
         const hover = ref(false);
         return { hover };
     },
+    data() {
+        return {
+            posts: [] as Post[],
+        };
+    },
     mounted() {
         post.get().then((response) => {
             if (response.success)
@@ -41,10 +46,10 @@ export default {
             }
         })
     },
-    data() {
-        return {
-            posts: [] as Post[],
-        };
+    methods: {
+        readMore(post: Post) {
+            this.$router.push(`/post/${post.slug}`);
+        }
     }
 }
 </script>

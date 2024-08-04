@@ -1,5 +1,5 @@
 <template>
-    <v-img :src="header" cover class="header-image"></v-img>
+    <v-img src="" cover class="header-image"></v-img>
     <v-container fluid class="nav-bar">
         <v-row justify="center">
             <v-col cols="12" md="8">
@@ -37,6 +37,11 @@ export default {
                 { text: 'Coming Soon', link: '/coming-soon' },
             ],
         }
+    },
+    methods: {
+        navigate(url: string) {
+            this.$router.push(url);
+        },
     }
 }
 </script>
