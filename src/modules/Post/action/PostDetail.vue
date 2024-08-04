@@ -20,20 +20,20 @@ export default {
     },
     data() {
         return {
-            id: '',
+            slug: '',
             post: {} as Post
         };
     },
     created() {
-            this.id = this.$route.params.id as string;
+            this.slug = this.$route.params.slug as string;
     },
     watch: {
-        '$route.params.id': function(newId) {
-            this.id = newId;
+        '$route.params.slug': function(newId) {
+            this.slug = newId;
         }
     },
     mounted() {
-        post.read_more(this.id).then((response) => {
+        post.read_more(this.slug).then((response) => {
             if (response.success)
             {
                 this.post = response.data;

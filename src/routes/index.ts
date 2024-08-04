@@ -7,6 +7,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'Home',
         component: () => import('@/modules/Post/Post.vue'),
     },
+    {
+        path: '/post/:slug',
+        name: 'Read More',
+        component: () => import('@/modules/Post/action/PostDetail.vue'),
+    },
 ];
   
 const router = createRouter({
