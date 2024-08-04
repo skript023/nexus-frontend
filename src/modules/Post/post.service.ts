@@ -18,15 +18,27 @@ export default class post
         }
     }
 
-    static async get(id?: string): Promise<ServerResponse<Post[] | Post>>
+    static async get_all(page?: number, limit?: number): Promise<ServerResponse<Post[]>>
+    {
+        try 
+        {
+            const response = await http.get(`/api/Post?page=${page}&limit${limit}`);
+
+            return response.data;
+        } 
+        catch (error: any) 
+        {
+            return error.response.data;
+        }
+    }
+
+    static async get(id?: string): Promise<ServerResponse<Post>>
     {
         try
         {
-            const route = id ? `/api/Post/${id}` : `/api/Post`;
+            const response = await http.get(`/api/Post/${id}`);
 
-            const response = await http.get(route);
-
-                return response.data;
+            return response.data;
         } 
         catch (error: any) 
         {

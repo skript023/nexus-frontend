@@ -39,10 +39,10 @@ export default {
         };
     },
     mounted() {
-        post.get().then((response) => {
+        post.get_all().then((response) => {
             if (response.success)
             {
-                this.posts = response.data as Post[];
+                this.posts = response.data;
             }
         })
     },
