@@ -16,7 +16,7 @@
         </v-col>
     </v-row>
     <!-- Pagination -->
-    <div class="text-center my-4">
+    <div v-if="posts.length > 0" class="text-center my-4">
         <v-btn class="mx-2" outlined color="#ff66b2">Prev</v-btn>
         <v-btn class="mx-2" outlined color="#ff66b2">Next</v-btn>
     </div>

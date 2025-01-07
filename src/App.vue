@@ -56,7 +56,7 @@ export default {
 				</v-container>
 			</v-main>
 			<!-- Footer -->
-			<v-footer color="#ff66B2">
+			<v-footer color="#ff66B2" class="mt-5">
 				<v-container>
 					<v-row>
 						<v-col class="text-center" cols="12">
