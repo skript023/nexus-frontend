@@ -19,7 +19,7 @@
     </v-container>
 </template>
 <script lang="ts">
-import '@/styles/blog.css';
+import '#root/styles/blog.css';
 
 export default {
     components: {
@@ -27,7 +27,7 @@ export default {
     },
     data() {
         return {
-            header: '/cybernetic_b.jpg',
+            header: './cybernetic_b.jpg',
             buttons: [
                 { text: 'HOME', link: '/' },
                 { text: 'About', link: '/about' },

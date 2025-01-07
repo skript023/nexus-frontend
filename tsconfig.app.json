@@ -16,14 +16,14 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "preserve",
-
+    
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "#root/*": ["./src/*"]
     },
     "types": ["vite/client"]
   },

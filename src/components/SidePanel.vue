@@ -10,10 +10,10 @@
                                 <v-img :src="popularPost.image" class="popular-post-image"></v-img>
                             </v-col>
                             <v-col cols="8">
-                                <v-list-item-subheader>
+                                <!-- <v-list-item-subheader> -->
                                     <v-list-item-title>{{ popularPost.title }}</v-list-item-title>
                                     <v-list-item-subtitle>{{ popularPost.excerpt }}</v-list-item-subtitle>
-                                </v-list-item-subheader>
+                                <!-- </v-list-item-subheader> -->
                             </v-col>
                         </v-row>
                     </v-list-item>
@@ -24,7 +24,7 @@
         <v-card class="mb-4">
             <v-card-title class="sidebar-title">Blog Archive</v-card-title>
             <v-card-text>
-                <v-treeview :items="archiveItems"></v-treeview>
+                <!-- <v-treeview :items="archiveItems"></v-treeview> -->
             </v-card-text>
         </v-card>
 
@@ -45,7 +45,7 @@
     </v-col>
 </template>
 <script lang="ts">
-import '@/styles/blog.css'
+import '#root/styles/blog.css'
 import { VTreeview } from 'vuetify/labs/components';
 
 export default {

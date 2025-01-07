@@ -16,17 +16,17 @@
         </v-col>
     </v-row>
     <!-- Pagination -->
-    <div class="text-center my-4">
+    <div v-if="posts.length > 0" class="text-center my-4">
         <v-btn class="mx-2" outlined color="#ff66b2">Prev</v-btn>
         <v-btn class="mx-2" outlined color="#ff66b2">Next</v-btn>
     </div>
 </template>
 <script lang="ts">
-import '@/styles/blog.css';
+import '#root/styles/blog.css';
 
 import { ref } from 'vue';
-import Post from './dto/post.dto';
-import post from './post.service';
+import Post from '#root/services/post/dto/post.dto';
+import post from '#root/services/post//post.service';
 
 export default {
     setup() {

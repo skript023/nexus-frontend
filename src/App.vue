@@ -1,11 +1,11 @@
 <script lang="ts">
-import router from '@/routes';
-import TopNav from '@/components/TopNav.vue';
-import SidePanel from '@/components/SidePanel.vue';
+import router from '#root/routes';
+import TopNav from '#root/components/TopNav.vue';
+import SidePanel from '#root/components/SidePanel.vue';
 import { RouterView } from 'vue-router';
 import { ProgressFinisher, useProgress } from '@marcoschulte/vue3-progress';
 
-import '@/styles/blog.css';
+import '#root/styles/blog.css';
 
 export default {
 	components:{
@@ -42,7 +42,7 @@ export default {
 
 <template>
 	<div id="app">
-		<vue3-progress />
+		<!-- <vue3-progress /> -->
 		<v-app  id="content">
 			<v-main>
 				<v-container class="pa-0">

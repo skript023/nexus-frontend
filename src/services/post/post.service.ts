@@ -1,6 +1,6 @@
-import { http } from "@/utils/http";
-import ServerResponse from "@/utils/response";
-import type Post from "./dto/post.dto";
+import { http } from "#root/utils/http";
+import ServerResponse from "#root/utils/response";
+import type Post from "#root/services/post/dto/post.dto";
 
 export default class post 
 {

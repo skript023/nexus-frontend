@@ -7,11 +7,11 @@
     </v-row>
 </template>
 <script lang="ts">
-import '@/styles/blog.css';
+import '#root/styles/blog.css';
 
 import { ref } from 'vue';
-import Post from '../dto/post.dto';
-import post from '../post.service';
+import Post from '#root/services/post/dto/post.dto';
+import post from '#root/services/post/post.service';
 
 export default {
     setup() {
