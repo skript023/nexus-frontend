@@ -42,7 +42,6 @@ export default {
 
 <template>
 	<div id="app">
-		<vue3-progress />
 		<v-app  id="content">
 			<v-main>
 				<v-container class="pa-0">

@@ -10,10 +10,8 @@
                                 <v-img :src="popularPost.image" class="popular-post-image"></v-img>
                             </v-col>
                             <v-col cols="8">
-                                <v-list-item-subheader>
-                                    <v-list-item-title>{{ popularPost.title }}</v-list-item-title>
-                                    <v-list-item-subtitle>{{ popularPost.excerpt }}</v-list-item-subtitle>
-                                </v-list-item-subheader>
+                                <v-list-item-title>{{ popularPost.title }}</v-list-item-title>
+                                <v-list-item-subtitle>{{ popularPost.excerpt }}</v-list-item-subtitle>
                             </v-col>
                         </v-row>
                     </v-list-item>
